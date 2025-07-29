@@ -8,7 +8,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-LOCAL_APPS= [
+DJANGO_APPS= [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -18,14 +18,15 @@ LOCAL_APPS= [
 ]
 
 PROJECT_APPS = [
-
+    "Teacher",
+    "Student",
 ]
 
 THIRD_PARTY_APPS = [
     'rest_framework',
 ]
 
-INSTALLED_APPS = LOCAL_APPS + PROJECT_APPS + THIRD_PARTY_APPS
+INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
