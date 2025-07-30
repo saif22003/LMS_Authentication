@@ -7,11 +7,7 @@ class TeacherModel(models.Model):
     teacher_phone = models.CharField(max_length=11,validators=[PhoneValidator()],unique=True)
     profile_picture = models.CharField(max_length=300)
     gender = models.CharField(max_length=10, choices=GenderChoice.choices, default=GenderChoice.MALE)
-    date_of_birth = models.DateField(
-        null=True,
-        blank=True,
-        validators=[DOBValidator()]
-    )
+    date_of_birth = models.DateField( null=True, blank=True, validators=[DOBValidator()])
     website = models.CharField(max_length=300, null=True, blank=True)
     status = models.CharField(max_length=15, choices=TeacherStatus.choices, default=TeacherStatus.PENDING)
     password = models.CharField(max_length=300)
